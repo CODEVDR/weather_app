@@ -15,10 +15,10 @@ let button = document.getElementById("button");
                 // "Forecast : " + val["forecast"][0]+","+val["forecast"][1]+","+val["forecast"][2] +
                 console.log("Fetching..")
                 let p1 = value[2].then((val) => {
-                    let appendtext = "Description : " + val["description"] + "<br>" + "Temperature : " + val["temperature"] + "<br>" + "Wind Speed : " + val["wind"]
+                    let appendtext = "Weather at "+ l +"<br> "+"Description : " + val["description"] + "<br>" + "Temperature : " + val["temperature"] + "<br>" + "Wind Speed : " + val["wind"]
                     document.getElementById("center").style.top = "30%"
                     document.getElementById("results").style.top = "50%"
-                    document.getElementById("results").innerHTML += appendtext
+                    document.getElementById("results").innerHTML = appendtext
                 })
             }
         }).catch((value) => {
